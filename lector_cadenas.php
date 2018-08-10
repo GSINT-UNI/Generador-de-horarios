@@ -9,7 +9,7 @@
 
   function llenar_matriz(&$matriz,$dia, $inicio, $fin){
     for($i=$inicio;$i<$fin;$i++)
-      $matriz[$dia][$i-7]="curso";
+      $matriz[$i-7][$dia]="curso";
   }
 
 /*
@@ -22,7 +22,7 @@
   $i=0;
   llenar0($curso_matriz);
   while ($i<strlen($cadena)){
-    if ($cadena[$i]=="L"){
+    if ($cadena[$i]=="L"&&$cadena[$i+1]=="U"){
       $dia = 0;
     }elseif ($cadena[$i]=="M"&&$cadena[$i+1]=="A") {
       $dia = 1;
